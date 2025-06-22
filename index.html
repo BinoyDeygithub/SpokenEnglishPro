@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Spoken English Classes | Only ₹99</title>
+    <link rel="icon" href="/static/one.png" type="image/x-icon" />
+    <link rel="icon" href="/static/one.png" type="image/png" />
+
+    <base target="_self" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .btn-pulse:hover {
+        animation: pulse 1.5s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="text-xl font-bold text-blue-600 dark:text-blue-400 flex items-center"
+            >
+              <i class="fas fa-language mr-2"></i> EnglishPro
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#features"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Features</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Testimonials</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Pricing</a
+            >
+            <!-- <button
+              id="paymentBtn"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition btn-pulse"
+            >
+              Unlock Classes for ₹99
+            </button> -->
+
+            <a
+              href="/payment"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition btn-pulse"
+              >Unlock Classes for ₹99</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="mobileMenuBtn" class="text-gray-700 dark:text-gray-300">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 pb-4 px-4"
+      >
+        <a
+          href="#features"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Features</a
+        >
+        <a
+          href="#testimonials"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Testimonials</a
+        >
+        <a
+          href="#pricing"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Pricing</a
+        >
+
+        <a
+          href="/payment"
+          class="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition btn-pulse"
+          >Unlock Classes for ₹99</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="md:flex items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            >
+              Master Spoken English in Just ₹99
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              Join our premium classes and speak English confidently in just 30
+              days!
+            </p>
+
+            <a
+              href="/payment"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg font-semibold transition btn-pulse"
+              >Get Started for ₹99</a
+            >
+          </div>
+          <div class="md:w-1/2 flex justify-center fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+              alt="English Learning"
+              class="rounded-lg shadow-xl w-full max-w-md h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section
+      id="features"
+      class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
+        >
+          Why Choose Our Classes
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-blue-600 dark:text-blue-400 mb-4">
+              <i class="fas fa-chalkboard-teacher text-4xl"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Expert Instructors
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Learn from certified English trainers with 10+ years of
+              experience.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-blue-600 dark:text-blue-400 mb-4">
+              <i class="fas fa-users text-4xl"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Interactive Sessions
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Small batch sizes for personalized attention and practice.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-blue-600 dark:text-blue-400 mb-4">
+              <i class="fas fa-certificate text-4xl"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Practical Curriculum
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Focus on real-world conversations, not just textbook English.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-700"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
+        >
+          What Our Students Say
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              "I was hesitant at first, but these classes transformed my
+              confidence. Now I can speak fluently in my job interviews!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Student"
+                class="w-10 h-10 rounded-full mr-3"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">
+                  Priya Sharma
+                </h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Marketing Professional
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              "Best ₹99 I've ever spent! The interactive sessions made learning
+              fun and effective."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Student"
+                class="w-10 h-10 rounded-full mr-3"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">
+                  Rahul Patel
+                </h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  College Student
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              "The instructors are patient and knowledgeable. My pronunciation
+              improved dramatically in just 2 weeks."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Student"
+                class="w-10 h-10 rounded-full mr-3"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white">
+                  Ananya Gupta
+                </h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Software Engineer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section
+      id="pricing"
+      class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
+        >
+          Simple & Affordable Pricing
+        </h2>
+        <div
+          class="max-w-md mx-auto bg-blue-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden"
+        >
+          <div class="px-6 py-8">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Premium Access
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-6">
+                Unlock all classes and materials
+              </p>
+              <div class="flex justify-center items-baseline mb-6">
+                <span
+                  class="text-5xl font-extrabold text-blue-600 dark:text-blue-400"
+                  >₹99</span
+                >
+                <span class="ml-1 text-gray-500 dark:text-gray-400"
+                  >one-time</span
+                >
+              </div>
+
+              <a
+                href="/payment"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-semibold transition btn-pulse"
+                >Go to Course</a
+              >
+            </div>
+            <div class="mt-8">
+              <ul class="space-y-3">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >10+ hours of video lessons</span
+                  >
+                </li>
+
+                <li class="flex items-center">
+                  <i class="fas fa-check text-green-500 mr-2"></i>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Downloadable materials</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div
+      id="paymentModal"
+      class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-11/12 md:w-1/2 lg:w-1/3 shadow-lg rounded-md bg-white dark:bg-gray-800"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+            Complete Your Payment
+          </h3>
+          <button
+            id="closeModalBtn"
+            class="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="mb-6">
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Scan the QR code below to pay ₹99 and unlock all classes instantly.
+          </p>
+          <div class="flex flex-col items-center">
+            <!-- Replace with your actual QR code image -->
+            <img
+              id="qrCodeImage"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/payment/99"
+              alt="Payment QR Code"
+              class="w-48 h-48 mb-4 border border-gray-200 dark:border-gray-600 p-2 rounded"
+            />
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">OR</p>
+            <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-md w-full">
+              <p class="text-sm font-medium text-gray-700 dark:text-gray-300">
+                UPI ID: <span id="upiId" class="font-mono">your.upi@id</span>
+              </p>
+              <button
+                id="copyUpiBtn"
+                class="mt-2 text-sm bg-blue-100 dark:bg-gray-600 text-blue-600 dark:text-blue-400 px-2 py-1 rounded"
+              >
+                <i class="fas fa-copy mr-1"></i> Copy UPI ID
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-md">
+          <p class="text-sm text-gray-700 dark:text-gray-300">
+            <i
+              class="fas fa-info-circle text-blue-500 dark:text-blue-400 mr-1"
+            ></i>
+            After payment, send a screenshot to +91XXXXXXXXXX on WhatsApp for
+            instant access.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="md:flex md:justify-between">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">EnglishPro</h3>
+            <p class="text-gray-400">
+              Premium spoken English classes at an affordable price.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">
+                Quick Links
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#features"
+                    class="text-gray-400 hover:text-white transition"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    class="text-gray-400 hover:text-white transition"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    class="text-gray-400 hover:text-white transition"
+                    >Pricing</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">
+                Support
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">
+                Connect
+              </h4>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm"
+        >
+          <p>© 2023 EnglishPro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("mobilePaymentBtn").onclick = function () {
+        window.location.href = "payment.html"; // change URL as needed
+      };
+    </script>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Payment modal functionality
+      const paymentButtons = [
+        document.getElementById("paymentBtn"),
+        document.getElementById("mobilePaymentBtn"),
+        document.getElementById("heroPaymentBtn"),
+        document.getElementById("pricingPaymentBtn"),
+      ];
+
+      const paymentModal = document.getElementById("paymentModal");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const copyUpiBtn = document.getElementById("copyUpiBtn");
+      const upiId = document.getElementById("upiId");
+
+      // Open modal when any payment button is clicked
+      paymentButtons.forEach((button) => {
+        if (button) {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            paymentModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          });
+        }
+      });
+
+      // Close modal
+      closeModalBtn.addEventListener("click", function () {
+        paymentModal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener("click", function (e) {
+        if (e.target === paymentModal) {
+          paymentModal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Copy UPI ID to clipboard
+      copyUpiBtn.addEventListener("click", function () {
+        navigator.clipboard.writeText(upiId.textContent).then(() => {
+          const originalText = copyUpiBtn.innerHTML;
+          copyUpiBtn.innerHTML = '<i class="fas fa-check mr-1"></i> Copied!';
+          setTimeout(() => {
+            copyUpiBtn.innerHTML = originalText;
+          }, 2000);
+        });
+      });
+
+      // Prevent default anchor behavior and smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Replace with your actual QR code and UPI ID
+      function setupPaymentDetails() {
+        // Replace these with your actual payment details
+        const qrCodeImage = document.getElementById("qrCodeImage");
+        const upiIdElement = document.getElementById("upiId");
+
+        // Example - replace with your actual QR code URL and UPI ID
+        // qrCodeImage.src = "your-actual-qr-code-image-url.jpg";
+        // upiIdElement.textContent = "your.upi@id";
+      }
+
+      // Initialize payment details when page loads
+      window.addEventListener("DOMContentLoaded", setupPaymentDetails);
+    </script>
+  </body>
+</html>

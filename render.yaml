@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: englishpro-site
+    env: python
+    # This command installs your Python dependencies from requirements.txt
+    buildCommand: "pip install -r requirements.txt"
+    # This command starts your Flask application using Gunicorn
+    startCommand: "gunicorn app:app"
+    envVars:
+      # It's generally better to set sensitive keys (like RAZORPAY_KEY_SECRET, SMTP_PASSWORD)
+      # directly in the Render Dashboard UI under your service's "Environment" tab
+      # and mark them as "Secret".
+      # You can put non-sensitive environment variables or public keys here.
+      - key: FLASK_ENV
+        value: production
+      # Example of how you *could* put keys here, but UI is preferred for secrets:
+      # - key: RAZORPAY_KEY_ID
+      #   value: "rzp_live_YOUR_ACTUAL_KEY_ID"
+      # - key: FLASK_SECRET_KEY
+      #   value: "a_long_random_string_for_flask_session_secret"

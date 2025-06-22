@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% block content %}
+<section class="text-center p-10">
+  <h1 class="text-4xl font-bold text-blue-700">Welcome to EnglishPr0</h1>
+  <p class="mt-4 text-lg">Premium Spoken English Course – Just ₹89</p>
+  <form id="pay-form" class="mt-6">
+    <input
+      type="email"
+      id="user-email"
+      placeholder="Enter your email"
+      required
+      class="border p-2 rounded w-full max-w-md"
+    />
+    <button type="submit" class="mt-4 px-6 py-3 bg-blue-600 text-white rounded">
+      Pay & Access
+    </button>
+  </form>
+  <div id="success-message" class="mt-6 hidden">
+    <p class="text-green-600 font-bold">✅ Payment Verified!</p>
+    <a
+      href="/dashboard"
+      class="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded"
+      >Go to Course</a
+    >
+  </div>
+</section>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  document.getElementById("pay-form").onsubmit = function (e) {
+    e.preventDefault(); // Prevent default form submission
+    const email = document.getElementById("user-email").value;
+
+    const options = {
+      key: "{{ key_id }}", // Dynamically inject the Razorpay Key ID from Flask
+      amount: 8900, // Amount in paisa (e.g., 100 paisa = ₹1). Ensure this matches your product price.
+      currency: "INR",
+      name: "EnglishPr0",
+      description: "Premium Course",
+      prefill: {
+        email: email,
+        // You can add 'name' and 'contact' if collected from user
+        // name: "User Name",
+        // contact: "9999999999"
+      },
+      handler: function (response) {
+        // Send the payment ID and email to your backend for verification
+        fetch("/verify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+            email: email,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status === "success") {
+              // Show success message element
+              document.getElementById("success-message").classList.remove("hidden");
+              // Redirect to the dashboard after a short delay
+              setTimeout(() => {
+                window.location.href = "/dashboard";
+              }, 2000); // Redirect after 2 seconds
+            } else {
+              // Display a more informative error message from the backend
+              alert("❌ Payment verification failed: " + (data.message || "Please try again."));
+            }
+          })
+          .catch((error) => {
+            console.error("Error during payment verification fetch:", error);
+            alert("An error occurred during payment verification. Please try again.");
+          });
+      },
+      modal: {
+        ondismiss: function() {
+            // Optional: Logic to run when the Razorpay modal is closed without completing payment
+            console.log('Razorpay checkout form closed by user.');
+        }
+      }
+    };
+    const rzp = new Razorpay(options);
+    rzp.open(); // Open the Razorpay checkout form
+  };
+</script>
+{% endblock %}

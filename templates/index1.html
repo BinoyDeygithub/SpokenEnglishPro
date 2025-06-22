@@ -1,0 +1,257 @@
+{% extends 'base.html' %} {% block content %}
+<nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <a
+          href="#"
+          class="text-xl font-bold text-blue-600 dark:text-blue-400 flex items-center"
+        >
+          <i class="fas fa-language mr-2"></i> EnglishPro
+        </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a
+          href="#features"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Features</a
+        >
+        <a
+          href="#testimonials"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Testimonials</a
+        >
+        <a
+          href="#pricing"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >Pricing</a
+        >
+        <a
+          href="/payment"
+          class="px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition"
+        >
+          Pay & Access
+        </a>
+      </div>
+      <div class="-mr-2 flex items-center md:hidden">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-700"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobileMenuBtn"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="md:hidden hidden" id="mobileMenu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a
+        href="#features"
+        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
+        >Features</a
+      >
+      <a
+        href="#testimonials"
+        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
+        >Testimonials</a
+      >
+      <a
+        href="#pricing"
+        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
+        >Pricing</a
+      >
+      <a
+        href="/payment"
+        class="block w-full text-center px-4 py-2 mt-4 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition"
+        >Pay & Access</a
+      >
+    </div>
+  </div>
+</nav>
+
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="text-5xl font-extrabold leading-tight mb-4">
+      Unlock Your English Fluency
+    </h1>
+    <p class="text-xl mb-8">
+      Master spoken English with our comprehensive, easy-to-follow course.
+    </p>
+    <a
+      href="/payment"
+      class="bg-white text-blue-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 inline-block btn-pulse"
+    >
+      Enroll Now for Just ₹89!
+    </a>
+  </div>
+</section>
+
+<section id="features" class="py-16 bg-white dark:bg-gray-800">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">
+      What You'll Learn
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div
+        class="feature-card bg-gray-100 dark:bg-gray-700 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
+      >
+        <i class="fas fa-book-open text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+          Structured Curriculum
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          From basic grammar to advanced conversation, our course covers it all.
+        </p>
+      </div>
+      <div
+        class="feature-card bg-gray-100 dark:bg-gray-700 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
+      >
+        <i class="fas fa-video text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+          Engaging Video Lessons
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Learn with clear, concise, and engaging video tutorials.
+        </p>
+      </div>
+      <div
+        class="feature-card bg-gray-100 dark:bg-gray-700 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
+      >
+        <i class="fas fa-microphone-alt text-blue-600 text-4xl mb-4"></i>
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+          Pronunciation Practice
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Improve your accent and speak English confidently.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="py-16 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">
+      What Our Students Say
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div
+        class="testimonial-card bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center"
+      >
+        <p class="text-lg text-gray-700 dark:text-gray-300 italic mb-6">
+          "EnglishPro changed my life! I can now confidently speak English at
+          work and with friends."
+        </p>
+        <p class="font-bold text-blue-600">- Priya Sharma</p>
+      </div>
+      <div
+        class="testimonial-card bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center"
+      >
+        <p class="text-lg text-gray-700 dark:text-gray-300 italic mb-6">
+          "The video lessons are fantastic. I've learned so much in such a
+          short time."
+        </p>
+        <p class="font-bold text-blue-600">- Rahul Singh</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="py-16 bg-white dark:bg-gray-800">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">
+      Affordable Learning
+    </h2>
+    <div
+      class="pricing-card bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-10 rounded-lg shadow-xl inline-block"
+    >
+      <h3 class="text-3xl font-extrabold mb-4">Full Course Access</h3>
+      <p class="text-5xl font-bold mb-6">₹89</p>
+      <ul class="text-lg mb-8 space-y-2">
+        <li>✅ All Video Lessons</li>
+        <li>✅ PDF Study Materials</li>
+        <li>✅ Pronunciation Guides</li>
+        <li>✅ Lifetime Access</li>
+      </ul>
+      <a
+        href="/payment"
+        class="bg-white text-blue-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 inline-block btn-pulse"
+      >
+        Get Instant Access
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-800 dark:bg-gray-950 py-10">
+  <div class="container mx-auto px-6 text-center">
+    <div class="mb-6">
+      <a
+        href="#"
+        class="text-2xl font-bold text-blue-400 hover:text-blue-300 transition"
+      >
+        EnglishPro
+      </a>
+    </div>
+    <div class="flex justify-center space-x-6 mb-6">
+      <a
+        href="#"
+        class="text-gray-400 hover:text-white transition"
+        aria-label="Facebook"
+      >
+        <i class="fab fa-facebook-f text-xl"></i>
+      </a>
+      <a
+        href="#"
+        class="text-gray-400 hover:text-white transition"
+        aria-label="Twitter"
+      >
+        <i class="fab fa-twitter text-xl"></i>
+      </a>
+      <a
+        href="#"
+        class="text-gray-400 hover:text-white transition"
+        aria-label="Instagram"
+      >
+        <i class="fab fa-instagram text-xl"></i>
+      </a>
+      <a
+        href="#"
+        class="text-gray-400 hover:text-white transition"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin-in text-xl"></i>
+      </a>
+    </div>
+    <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+      <p>© 2023 EnglishPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  // Corrected: mobile payment button should direct to the /payment route
+  document.getElementById("mobileMenuBtn").onclick = function () {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("hidden");
+  };
+</script>
+{% endblock %}
